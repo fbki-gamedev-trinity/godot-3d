@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://dcxmyjssapca4"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rwrpr"]
+transparency = 1
+vertex_color_use_as_albedo = true
+albedo_color = Color(0.693242, 0.471052, 0.0582745, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_6l1xy"]
+material = SubResource("StandardMaterial3D_rwrpr")
+size = Vector3(0.1, 0.1, 0.1)
+
+[node name="CPUParticles3D" type="CPUParticles3D"]
+lifetime = 0.7
+explosiveness = 1.0
+mesh = SubResource("BoxMesh_6l1xy")
+emission_shape = 3
+emission_box_extents = Vector3(1, 1, 1)
+spread = 90.0
+initial_velocity_min = 2.0
+initial_velocity_max = 4.0
+scale_amount_min = 0.5
+scale_amount_max = 1.5
