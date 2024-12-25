@@ -1,4 +1,7 @@
-[gd_resource type="ShaderMaterial" load_steps=5 format=3 uid="uid://bb14d7hww5dpa"]
+[gd_resource type="ShaderMaterial" load_steps=4 format=3 uid="uid://bb14d7hww5dpa"]
+
+[ext_resource type="Texture2D" uid="uid://gof81bmhslux" path="res://assets/textures/water2.jpg" id="1_vlpim"]
+[ext_resource type="Texture2D" uid="uid://cwn1p6oaxup63" path="res://assets/textures/water2nor.jpg" id="2_m1lro"]
 
 [sub_resource type="Shader" id="Shader_sr1md"]
 code = "// NOTE: Shader automatically converted from Godot Engine 4.3.stable's StandardMaterial3D.
@@ -97,24 +100,12 @@ void fragment() {
 }
 "
 
-[sub_resource type="FastNoiseLite" id="FastNoiseLite_kxxb5"]
-
-[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_fgkkh"]
-seamless = true
-as_normal_map = true
-noise = SubResource("FastNoiseLite_kxxb5")
-
-[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_trouu"]
-seamless = true
-as_normal_map = true
-noise = SubResource("FastNoiseLite_kxxb5")
-
 [resource]
 render_priority = 0
 shader = SubResource("Shader_sr1md")
-shader_parameter/albedo = Color(0.413055, 0.8826, 1, 0.768627)
-shader_parameter/point_size = 1.0
-shader_parameter/roughness = 0.0
+shader_parameter/albedo = Color(0.501961, 0.898039, 1, 0.811765)
+shader_parameter/point_size = 0.1
+shader_parameter/roughness = 0.084
 shader_parameter/metallic_texture_channel = null
 shader_parameter/specular = 0.5
 shader_parameter/metallic = 0.0
@@ -126,5 +117,6 @@ shader_parameter/uv1_scale = Vector3(0.01, 0.025, 0.02)
 shader_parameter/uv1_offset = Vector3(0, 0, 0)
 shader_parameter/uv2_scale = Vector3(1, 1, 1)
 shader_parameter/uv2_offset = Vector3(0, 0, 0)
-shader_parameter/texture_refraction = SubResource("NoiseTexture2D_trouu")
-shader_parameter/texture_normal = SubResource("NoiseTexture2D_fgkkh")
+shader_parameter/texture_albedo = ExtResource("1_vlpim")
+shader_parameter/texture_refraction = ExtResource("2_m1lro")
+shader_parameter/texture_normal = ExtResource("2_m1lro")

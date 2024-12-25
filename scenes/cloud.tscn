@@ -1,0 +1,30 @@
+[gd_scene load_steps=4 format=3 uid="uid://cvdi3tia5ixab"]
+
+[ext_resource type="Script" path="res://scripts/cloud.gd" id="1_q3bm8"]
+[ext_resource type="ArrayMesh" uid="uid://be5rdevc55foj" path="res://assets/models/uploads_files_2155451_cloud.obj" id="1_ymfhw"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_1u3gx"]
+height = 141.886
+radius = 51.4048
+
+[node name="cloud" type="CharacterBody3D"]
+script = ExtResource("1_q3bm8")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
+shape = SubResource("CylinderShape3D_1u3gx")
+
+[node name="UploadsFiles2155451Cloud" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, -0.554332, -1.19209e-07, -10.6402)
+mesh = ExtResource("1_ymfhw")
+skeleton = NodePath("../..")
+
+[node name="UploadsFiles2155451Cloud2" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.03, 0, 0, 0, 0.03, 0, 0, 0, 0.03, 33.8836, -10.3104, 38.246)
+mesh = ExtResource("1_ymfhw")
+skeleton = NodePath("../..")
+
+[node name="UploadsFiles2155451Cloud3" type="MeshInstance3D" parent="."]
+transform = Transform3D(-0.03, 0, -2.62268e-09, 0, 0.03, 0, 2.62268e-09, 0, -0.03, -24.4399, -10.6326, -64.9617)
+mesh = ExtResource("1_ymfhw")
+skeleton = NodePath("../..")

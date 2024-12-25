@@ -1,0 +1,20 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://d2j0vbh6ov2u5"]
+
+[ext_resource type="Texture2D" uid="uid://ddyxyg5if2faj" path="res://assets/textures/cloud2.jpg" id="1_cak3w"]
+[ext_resource type="Texture2D" uid="uid://cwn1p6oaxup63" path="res://assets/textures/water2nor.jpg" id="2_r5s2f"]
+
+[resource]
+transparency = 1
+no_depth_test = true
+albedo_color = Color(1, 1, 1, 0.47451)
+albedo_texture = ExtResource("1_cak3w")
+metallic_specular = 0.0
+emission = Color(0.830335, 0.830335, 0.830335, 1)
+emission_energy_multiplier = 0.0
+emission_operator = 1
+normal_enabled = true
+normal_texture = ExtResource("2_r5s2f")
+clearcoat_enabled = true
+clearcoat_roughness = 0.22
+refraction_scale = 0.47
+refraction_texture_channel = 2

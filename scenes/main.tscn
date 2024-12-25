@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://b6k0hfq7ohax4"]
+[gd_scene load_steps=32 format=3 uid="uid://b6k0hfq7ohax4"]
 
 [ext_resource type="Script" path="res://scripts/character_body_3d.gd" id="1_rchrr"]
 [ext_resource type="PackedScene" uid="uid://dcxmyjssapca4" path="res://scenes/dust.tscn" id="2_4w33q"]
@@ -8,6 +8,10 @@
 [ext_resource type="PackedScene" uid="uid://cy6mjn3npf5kf" path="res://scenes/water.tscn" id="6_yr2ud"]
 [ext_resource type="PackedScene" uid="uid://bju4bv15ekyrp" path="res://assets/models/pyramid.glb" id="7_pgjs2"]
 [ext_resource type="PackedScene" uid="uid://d1jn36gdfxiey" path="res://assets/models/cactus_verde.glb" id="8_lpffj"]
+[ext_resource type="PackedScene" uid="uid://cvdi3tia5ixab" path="res://scenes/cloud.tscn" id="9_gyx4b"]
+[ext_resource type="PackedScene" uid="uid://d04pavme2qxpp" path="res://assets/models/jetty_ruins_polycam_ipad_pro_lidar.glb" id="10_pe2ai"]
+[ext_resource type="PackedScene" uid="uid://du6acwhsa672t" path="res://assets/models/cactus_big.glb" id="11_b0kkx"]
+[ext_resource type="PackedScene" uid="uid://ceyr3v8b6xgdd" path="res://assets/models/sandstone_boulder_vmiibev_low.glb" id="12_a8xvq"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_5vp22"]
 
@@ -230,7 +234,7 @@ transform = Transform3D(-0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, -0.707107
 mesh = SubResource("TextMesh_3rjm6")
 
 [node name="Node3D" parent="." instance=ExtResource("6_yr2ud")]
-transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 22.6776, 0.085893, 19.22)
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 22.6949, 0.0858935, 19.2076)
 
 [node name="Sketchfab_Scene" parent="." instance=ExtResource("7_pgjs2")]
 transform = Transform3D(0.837213, 0, -0.546877, 0, 1, 0, 0.546877, 0, 0.837213, -17.482, 0.105855, -20.6065)
@@ -255,3 +259,35 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.8991, 0.972596, -5.52978)
 
 [node name="Sketchfab_Scene11" parent="." instance=ExtResource("8_lpffj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.22771, 1.00534, -20.5554)
+
+[node name="Node3D2" type="Node3D" parent="."]
+transform = Transform3D(0.188653, 0, 0.0664092, 0, 0.2, 0, -0.0664092, 0, 0.188653, 0, 24.7835, 0)
+
+[node name="Marker3D" type="Marker3D" parent="Node3D2"]
+transform = Transform3D(1, 0, -8.9407e-08, 0, 1, 0, 8.9407e-08, 0, 1, -81.9999, 0, -282.724)
+
+[node name="Marker3D2" type="Marker3D" parent="Node3D2"]
+transform = Transform3D(1, 0, -8.9407e-08, 0, 1, 0, 8.9407e-08, 0, 1, 70.5568, 0, 110.306)
+
+[node name="cloud" parent="." node_paths=PackedStringArray("patrol_path") instance=ExtResource("9_gyx4b")]
+transform = Transform3D(0.282979, 0, 0.0996138, 0, 0.3, 0, -0.0996138, 0, 0.282979, 0, 29.6791, 0)
+speed = 0.5
+patrol_path = [NodePath("../Node3D2/Marker3D"), NodePath("../Node3D2/Marker3D2")]
+
+[node name="Sketchfab_Scene5" parent="." instance=ExtResource("7_pgjs2")]
+transform = Transform3D(0.706928, 0, -0.374504, 0, 0.8, 0, 0.374504, 0, 0.706928, -2.48002, 0, -22.5251)
+
+[node name="Sketchfab_Scene6" parent="." instance=ExtResource("10_pe2ai")]
+transform = Transform3D(0.99936, -0.0357495, -0.00125839, 0.0357716, 0.998741, 0.0351561, 0, -0.0351786, 0.999381, -25.7956, 1.05991, 23.0217)
+
+[node name="Sketchfab_Scene7" parent="." instance=ExtResource("11_b0kkx")]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -25.4252, 0.0295828, 19.7099)
+
+[node name="Sketchfab_Scene12" parent="." instance=ExtResource("11_b0kkx")]
+transform = Transform3D(0.06, 0, 0, 0, 0.06, 0, 0, 0, 0.06, -23.6725, 0.0295828, 24.4347)
+
+[node name="Sketchfab_Scene14" parent="." instance=ExtResource("12_a8xvq")]
+transform = Transform3D(0.897536, 0, 0.440942, 0, 1, 0, -0.440942, 0, 0.897536, -23.2438, 0.0295828, 25.689)
+
+[node name="Sketchfab_Scene13" parent="." instance=ExtResource("12_a8xvq")]
+transform = Transform3D(-0.298741, 0, -0.954334, 0, 1, 0, 0.954334, 0, -0.298741, -28.3369, 0.0295828, 21.0431)

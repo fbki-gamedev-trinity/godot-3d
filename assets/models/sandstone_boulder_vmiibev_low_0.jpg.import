@@ -1,0 +1,39 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://dvnmo4t54krlq"
+path.s3tc="res://.godot/imported/sandstone_boulder_vmiibev_low_0.jpg-f23f836ec79b0d29c46b11e80dffd5ee.s3tc.ctex"
+path.etc2="res://.godot/imported/sandstone_boulder_vmiibev_low_0.jpg-f23f836ec79b0d29c46b11e80dffd5ee.etc2.ctex"
+metadata={
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
+"vram_texture": true
+}
+generator_parameters={
+"md5": "585ad9e4ee1c74e4f5df25c03daf34a5"
+}
+
+[deps]
+
+source_file="res://assets/models/sandstone_boulder_vmiibev_low_0.jpg"
+dest_files=["res://.godot/imported/sandstone_boulder_vmiibev_low_0.jpg-f23f836ec79b0d29c46b11e80dffd5ee.s3tc.ctex", "res://.godot/imported/sandstone_boulder_vmiibev_low_0.jpg-f23f836ec79b0d29c46b11e80dffd5ee.etc2.ctex"]
+
+[params]
+
+compress/mode=2
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=true
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=0
