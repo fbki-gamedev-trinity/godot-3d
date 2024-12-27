@@ -1,8 +1,10 @@
 extends RayCast3D
-@onready var water = $"../../Node3D"
-@onready var camera_3d: Camera3D = $"../Node3D/Camera3D"
+@onready var water = %water
+@onready var camera_3d: Camera3D = $"../Camera3D"
+#@onready var camera_3d: Camera3D = $"../XRCamera3D"
 @onready var character = %CharacterBody3D
-@onready var cloud = $"../../cloud"
+#@onready var character = $".."
+@onready var cloud = %cloud
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass # Replace with function body.
@@ -22,7 +24,7 @@ func _process(delta: float) -> void:
 
 	var result = space_state.intersect_ray(query)
 	if result:
-		if result.collider.is_class("Area3D") && "Teleport" in result.collider.name:
+		if "Teleport" in result.collider.name:
 			print_debug("Вижу")
 			print_debug(result.position, result.collider.name)
 			character.position.x = result.position.x
@@ -31,5 +33,7 @@ func _process(delta: float) -> void:
 			water.visible = true
 		if result.collider.name == "cloud":
 			cloud.speed = 0.5
+		if result.collider.name == "ruins":
+			result.collider.run()
 	else:
 		print_debug("Не вижу")
